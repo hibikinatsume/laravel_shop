@@ -4,7 +4,8 @@
     <div class="card card-dark p-3">
         <!-- card-body -->
         <div class="card-body">
-            <form action="#" method="POST">
+            @include('admin.alert')
+            <form action="" method="POST">
                 <!-- name -->
                 <div class="row">
                     <div class="col-sm-12">
@@ -21,9 +22,12 @@
                     <div class="col-sm-12">
                         <!-- select -->
                         <div class="form-group">
-                            <label>Select</label>
+                            <label>Chọn danh mục</label>
                             <select class="form-control" name="parent">
                                 <option value="0">Danh mục</option>
+                                @foreach ($categories as $category)
+                                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                @endforeach
                             </select>
                         </div>
                     </div>

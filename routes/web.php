@@ -33,6 +33,7 @@ Route::middleware(['auth'])->group(function () {
         //Categories
         Route::prefix('category')->group(function () {
             Route::get('add', [CategoryController::class, 'create']);
+            Route::post('add', [CategoryController::class, 'store']);
         });
     });
 });
