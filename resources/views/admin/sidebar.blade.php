@@ -7,7 +7,7 @@
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <!-- Home -->
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="/admin/" class="nav-link">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>Trang chủ</p>
                     </a>
@@ -28,7 +28,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="../index2.html" class="nav-link">
+                            <a href="/admin/category/list" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Danh sách danh mục</p>
                             </a>

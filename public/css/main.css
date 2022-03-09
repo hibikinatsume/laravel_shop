@@ -1,0 +1,21 @@
+.resize {
+    width: 96%;
+    margin-inline-start: auto;
+}
+.icon-tools {
+    float: right;
+    margin-right: 15px;
+}
+
+.icon-tools:hover {
+    cursor: pointer;
+}
+
+.icon-tools.fa-trash:hover {
+    color: #dc3545;
+}
+
+.icon-tools.fa-eye:hover {
+    color: #6610f2;
+
+}

@@ -34,6 +34,7 @@ Route::middleware(['auth'])->group(function () {
         Route::prefix('category')->group(function () {
             Route::get('add', [CategoryController::class, 'create']);
             Route::post('add', [CategoryController::class, 'store']);
+            Route::get('list', [CategoryController::class, 'index']);
         });
     });
 });

@@ -14,6 +14,11 @@ class CategoryService
         return Category::where('parent_id', 0)->get();
     }
 
+    public function getAll()
+    {
+        return Category::orderBy('id')->get();
+    }
+
     public function create($request)
     {
         try {

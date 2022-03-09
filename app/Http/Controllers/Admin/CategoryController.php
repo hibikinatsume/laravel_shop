@@ -16,6 +16,14 @@ class CategoryController extends Controller
         $this->categoryService = $categoryService;
     }
 
+    public function index() 
+    {
+        return view('admin.category.list', [
+            'title' => 'DANH SÁCH DANH MỤC',
+            'categories' => $this->categoryService->getAll(),
+        ]);
+    }
+
     public function create()
     {
         return view('admin.category.add', [
