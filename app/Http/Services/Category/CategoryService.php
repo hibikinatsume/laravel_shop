@@ -38,4 +38,29 @@ class CategoryService
         return true;
     }
 
+    public function destroy($request)
+    {
+        $id = $request->input('id');
+        $category = Category::where('id', $id)->first();
+
+        if ($category) {
+            return Category::where('id', $id)->orWhere('parent_id', $id)->delete();
+        }
+
+        return false;
+    }
+
+    public function update($category, $request)
+    {
+        if ($request->input('parent') != $category->id) {
+            $category->parent_id = (int) $request->input('parent');
+        }
+        $category->name = (string) $request->input('name');
+        $category->slug = Str::slug($request->input('name'), '-');
+        $category->active = (int) $request->input('active');
+        $category->save();
+
+        Session::flash('success', 'Cập nhật danh mục thành công');
+        return true;
+    }
 }

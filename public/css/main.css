@@ -2,6 +2,7 @@
     width: 96%;
     margin-inline-start: auto;
 }
+
 .icon-tools {
     float: right;
     margin-right: 15px;
@@ -11,11 +12,18 @@
     cursor: pointer;
 }
 
-.icon-tools.fa-trash:hover {
+.icon-delete {
     color: #dc3545;
 }
 
-.icon-tools.fa-eye:hover {
-    color: #6610f2;
+.icon-edit {
+    color: #007bff!important;
+}
 
+.icon-active {
+    color: #20c997;
+}
+
+.icon-not-active {
+    color: gainsboro;
 }
