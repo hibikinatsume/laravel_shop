@@ -3,7 +3,8 @@ $.ajaxSetup({
         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
     }
 });
-/*remove category*/
+
+/*remove*/
 function remove(id, url) {
     if (confirm('Bạn có chắc muốn xóa?')) {
         $.ajax({

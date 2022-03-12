@@ -17,7 +17,7 @@
                 <li class="nav-item">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-th"></i>
-                        <p>Danh mục <i class="right fas fa-angle-left"></i>
+                        <p>Quản lý danh mục <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
                     <ul class="nav nav-treeview" style="display: none;">
@@ -40,7 +40,7 @@
                 <li class="nav-item">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-book"></i>
-                        <p>Sản phẩm <i class="right fas fa-angle-left"></i>
+                        <p>Quản lý sản phẩm <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
                     <ul class="nav nav-treeview" style="display: none;">
@@ -59,6 +59,29 @@
                     </ul>
                 </li>
                 <!-- /.products -->
+                <!-- slide_show -->
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-book"></i>
+                        <p>Quản lý slide <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview" style="display: none;">
+                        <li class="nav-item">
+                            <a href="/admin/slide/add" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Thêm slideshow</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/admin/slide/list" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Danh sách slideshow</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- /.slide_show -->
             </ul>
         </nav>
         <!-- /.sidebar-menu -->

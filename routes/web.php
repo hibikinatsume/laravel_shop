@@ -6,6 +6,7 @@ use \App\Http\Controllers\Admin\MainController;
 use \App\Http\Controllers\Admin\CategoryController;
 use \App\Http\Controllers\Admin\ProductController;
 use \App\Http\Controllers\Admin\UploadController;
+use \App\Http\Controllers\Admin\SlideController;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,6 +51,16 @@ Route::middleware(['auth'])->group(function() {
             Route::get('edit/{product}', [ProductController::class, 'show']);
             Route::post('edit/{product}', [ProductController::class, 'update']);
             Route::post('destroy', [ProductController::class, 'destroy']);
+        });
+
+        #Slideshow
+        Route::prefix('slide')->group(function() {
+            Route::get('add', [SlideController::class, 'create']);
+            Route::post('add', [SlideController::class, 'store']);
+            Route::get('list', [SlideController::class, 'index']);
+            Route::get('edit/{slide}', [SlideController::class, 'show']);
+            Route::post('edit/{slide}', [SlideController::class, 'update']);
+            Route::post('destroy', [SlideController::class, 'destroy']);
         });
 
         #Upload
