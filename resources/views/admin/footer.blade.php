@@ -4,5 +4,10 @@
 <script src="/template/admin/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
 <script src="/template/admin/dist/js/adminlte.min.js"></script>
+<script>
+    CKEDITOR.replace('editorproduct');
+</script>
 <!-- My javaScript -->
 <script src="/js/main.js"></script>
+
+

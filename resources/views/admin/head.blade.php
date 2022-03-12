@@ -12,5 +12,7 @@
 <link rel="stylesheet" href="/template/admin/dist/css/adminlte.min.css">
 <!-- My style -->
 <link rel="stylesheet" href="/css/main.css">
+<!-- CKEditor -->
+<script src="/ckeditor/ckeditor.js"></script>
 
 <meta name="csrf-token" content="{{ csrf_token() }}">

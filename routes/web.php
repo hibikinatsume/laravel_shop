@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\Admin\Users\LoginController;
 use \App\Http\Controllers\Admin\MainController;
 use \App\Http\Controllers\Admin\CategoryController;
+use \App\Http\Controllers\Admin\ProductController;
+use \App\Http\Controllers\Admin\UploadController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,18 +22,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-/* Admin page */ 
+#Admin page 
 Route::get('admin/users/login', [LoginController::class, 'index'])->name('login');
 Route::post('admin/users/login/store', [LoginController::class, 'store']);
 
-Route::middleware(['auth'])->group(function () {
+Route::middleware(['auth'])->group(function() {
 
-    Route::prefix('admin')->group(function () {
+    Route::prefix('admin')->group(function() {
         Route::get('/', [MainController::class, 'index'])->name('admin');
         Route::get('main', [MainController::class, 'index']);
 
-        //Categories
-        Route::prefix('category')->group(function () {
+        #Categories
+        Route::prefix('category')->group(function() {
             Route::get('add', [CategoryController::class, 'create']);
             Route::post('add', [CategoryController::class, 'store']);
             Route::get('list', [CategoryController::class, 'index']);
@@ -39,5 +41,18 @@ Route::middleware(['auth'])->group(function () {
             Route::post('edit/{category}', [CategoryController::class, 'update']);
             Route::post('destroy', [CategoryController::class, 'destroy']);
         });
+
+        #Products
+        Route::prefix('product')->group(function() {
+            Route::get('add', [ProductController::class, 'create']);
+            Route::post('add', [ProductController::class, 'store']);
+            Route::get('list', [ProductController::class, 'index']);
+            Route::get('edit/{product}', [ProductController::class, 'show']);
+            Route::post('edit/{product}', [ProductController::class, 'update']);
+            Route::post('destroy', [ProductController::class, 'destroy']);
+        });
+
+        #Upload
+        Route::post('upload/services', [UploadController::class, 'store']);
     });
 });
