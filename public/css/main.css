@@ -1,3 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,600;0,800;1,600&display=swap');
+body {
+    font-family: "Audiowide", sans-serif;
+}
+
+.main-menu>li>a,
+.ltext-103,
+.stext-101,
+.ltext-104 {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 900;
+}
+
 .resize {
     width: 96%;
     margin-inline-start: auto;
@@ -26,4 +39,14 @@
 
 .icon-not-active {
     color: gainsboro;
+}
+
+.title-list {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.ltext-104 {
+    color: aliceblue;
 }

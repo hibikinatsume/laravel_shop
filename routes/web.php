@@ -7,6 +7,7 @@ use \App\Http\Controllers\Admin\CategoryController;
 use \App\Http\Controllers\Admin\ProductController;
 use \App\Http\Controllers\Admin\UploadController;
 use \App\Http\Controllers\Admin\SlideController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,10 +19,9 @@ use \App\Http\Controllers\Admin\SlideController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
+#Home page
+Route::get('/',  [HomeController::class, 'index']);
+Route::post('/services/load-product',  [HomeController::class, 'loadProduct']);
 
 #Admin page 
 Route::get('admin/users/login', [LoginController::class, 'index'])->name('login');

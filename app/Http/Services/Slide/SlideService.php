@@ -33,6 +33,11 @@ class SlideService
         return Slide::orderByDesc('id')->get();
     }
 
+    public function getToHome()
+    {
+        return Slide::orderBy('sort_by')->limit(3)->get();
+    }
+
     public function update($request, $slide)
     {
         $slide->name = (string) $request->input('name');
