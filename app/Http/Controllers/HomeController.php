@@ -24,7 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('main', [
+        return view('home', [
             'title' => 'SHOP',
             'slides' => $this->slideService->getToHome(),
             'products' => $this->productService->get(),

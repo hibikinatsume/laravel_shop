@@ -8,6 +8,8 @@ use \App\Http\Controllers\Admin\ProductController;
 use \App\Http\Controllers\Admin\UploadController;
 use \App\Http\Controllers\Admin\SlideController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MenuController;
+use App\Http\Controllers\CartController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +24,12 @@ use App\Http\Controllers\HomeController;
 #Home page
 Route::get('/',  [HomeController::class, 'index']);
 Route::post('/services/load-product',  [HomeController::class, 'loadProduct']);
+Route::get('danh-muc/{id}-{slug}.html', [MenuController::class, 'index']);
+Route::get('san-pham/{id}-{slug}.html', [App\Http\Controllers\ProductController::class, 'index']);
+Route::post('add-cart', [CartController::class, 'index']);
+Route::get('carts', [CartController::class, 'show']);
+Route::post('update-cart', [CartController::class, 'update']);
+Route::get('carts/delete/{id}', [CartController::class, 'remove']);
 
 #Admin page 
 Route::get('admin/users/login', [LoginController::class, 'index'])->name('login');

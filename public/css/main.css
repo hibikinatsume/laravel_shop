@@ -6,7 +6,17 @@ body {
 .main-menu>li>a,
 .ltext-103,
 .stext-101,
-.ltext-104 {
+.ltext-104,
+.stext-106,
+.ltext-106,
+.stext-102,
+.how-pos2 h2,
+.how-pos2 h3,
+.how-pos2 p,
+.mtext-109,
+.mtext-101,
+.stext-112,
+.table-shopping-cart .table_head th {
     font-family: 'Fira Sans', sans-serif;
     font-weight: 900;
 }
@@ -49,4 +59,14 @@ body {
 
 .ltext-104 {
     color: aliceblue;
+}
+
+.how-pos2 {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+}
+
+.icon-header-noti::after {
+    content: none;
 }

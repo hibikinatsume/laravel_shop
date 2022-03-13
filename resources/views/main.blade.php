@@ -10,15 +10,7 @@
     <!-- Header -->
     @include('header')
 
-    <!-- Cart -->
-    @include('cart')
-
-    <!-- Slider -->
-    @include('slide')
-
-    <!-- Product -->
-    @include('list')
-
+    @yield('content')
 
     <!-- Back to top -->
     <div class="btn-back-to-top" id="myBtn">

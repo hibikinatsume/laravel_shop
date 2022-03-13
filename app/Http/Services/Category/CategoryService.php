@@ -63,4 +63,21 @@ class CategoryService
         Session::flash('success', 'Cập nhật danh mục thành công');
         return true;
     }
+
+    public function getById($id)
+    {
+        return Category::where('id', $id)->where('active', 1)->firstOrFail();
+    }
+
+    public function getProduct($category, $request)
+    {
+        $query =  $category->products()->select('id', 'name', 'price', 'price_sale', 'thumb')
+        ->where('active', 1);
+
+        if ($request->input('price')) {
+            $query->orderBy('price', $request->input('price'));
+        }
+        
+        return $query->orderByDesc('id')->get();
+    }
 }

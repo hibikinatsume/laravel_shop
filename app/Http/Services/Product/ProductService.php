@@ -22,4 +22,19 @@ class ProductService
                     ->get();
     }
 
+    public function show($id)
+    {
+        return Product::where('id', $id)->where('active', 1)->with('category')->firstOrFail();
+    }
+
+    public function relation($category_id, $product_id)
+    {
+        return Product::select('id', 'name', 'price', 'price_sale', 'thumb')
+        ->where('category_id', $category_id)
+        ->where('active', 1)
+        ->where('id', '!=', $product_id)
+        ->limit(4)
+        ->get();
+    }
+
 }

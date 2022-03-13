@@ -40,15 +40,22 @@ class Helper
         $html = '';
         foreach ($data as $key => $category) {
             if ($category->parent_id == $parent_id) {
-                $html .= '
-                <li>
-                    <a href="/danh-muc/"' .$category->id . '-' . Str::slug($category->name, '-') . '.html">' . $category->name . '</a>';
-                if (self::isChild($data, $category->id)) {
-                    $html .= '<ul class="sub-menu">';
-                    $html .= self::categories_home($data, $category->id);
-                    $html .= '</ul>';
+                $html .= '<li>';
+                if ($category->parent_id == 0) {
+                    $html .= '<a href="#">' . $category->name . '</a>';
+                    if (self::isChild($data, $category->id)) {
+                        $html .= '<ul class="sub-menu">';
+                        $html .= self::categories_home($data, $category->id);
+                        $html .= '</ul>';
+                    } 
+                } else {
+                    $html .= '    <a href="/danh-muc/' .$category->id . '-' . Str::slug($category->name, '-') . '.html">' . $category->name . '</a>';
+                    if (self::isChild($data, $category->id)) {
+                        $html .= '<ul class="sub-menu">';
+                        $html .= self::categories_home($data, $category->id);
+                        $html .= '</ul>';
+                    }  
                 }
-
                 $html .= '</li>';
             }
         }
