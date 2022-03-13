@@ -39,7 +39,7 @@
                 <!-- Products -->
                 <li class="nav-item">
                     <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-book"></i>
+                        <i class="nav-icon fas fa-columns"></i>
                         <p>Quản lý sản phẩm <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
@@ -62,7 +62,7 @@
                 <!-- slide_show -->
                 <li class="nav-item">
                     <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-book"></i>
+                        <i class="nav-icon far fa-image"></i>
                         <p>Quản lý slide <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
@@ -82,6 +82,23 @@
                     </ul>
                 </li>
                 <!-- /.slide_show -->
+                <!-- order -->
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon far fa-envelope"></i>
+                        <p>Quản lý đơn hàng<i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview" style="display: none;">
+                        <li class="nav-item">
+                            <a href="/admin/customers" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Danh sách đơn hàng</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- /.order -->
             </ul>
         </nav>
         <!-- /.sidebar-menu -->

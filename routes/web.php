@@ -10,6 +10,7 @@ use \App\Http\Controllers\Admin\SlideController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\Admin\OrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -71,6 +72,10 @@ Route::middleware(['auth'])->group(function() {
             Route::post('edit/{slide}', [SlideController::class, 'update']);
             Route::post('destroy', [SlideController::class, 'destroy']);
         });
+
+        #Order
+        Route::get('customers', [OrderController::class, 'index']);
+        Route::get('customers/view/{customer}', [OrderController::class, 'show']);
 
         #Upload
         Route::post('upload/services', [UploadController::class, 'store']);
