@@ -50,4 +50,10 @@ class CartController extends Controller
 
         return redirect('/carts');
     }
+
+    public function checkout(Request $request)
+    {
+        $this->cartService->checkout($request);
+        return redirect()->back();
+    }
 }
